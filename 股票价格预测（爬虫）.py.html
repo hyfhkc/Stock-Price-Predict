@@ -218,14 +218,14 @@ plt.show()
 
 pred = results.get_prediction('2018-06-10','2019-03-24', dynamic=False)
 
-#置信区间
+#confidence interval
 pred_ci = pred.conf_int()
 
-#先画出原图像
+#plot the history figure
 ax = y['2016':].plot(label='observed')
 
 pred.predicted_mean.plot(ax=ax, label='One-step ahead Forecast', alpha=.7, figsize=(14, 7))
-#画出置信区间
+#plot confidence interval 
 ax.fill_between(pred_ci.index,
                 pred_ci.iloc[:, 0],
                 pred_ci.iloc[:, 1], color='k', alpha=.2)
