@@ -165,7 +165,8 @@ print('The Mean Squared Error of our forecasts is {}'.format(round(mse, 2)))
 ```
 
 ## Step6: Producing and visualizing forecasts
-# Let the model predict the trend of Alibaba stock prices over the next 40 weeks and output the results 
+* Let the model predict the trend of Alibaba stock prices over the next 40 weeks and output the results 
+
 ```
 pred_uc = results.get_forecast(steps=40)
 pred_ci = pred_uc.conf_int()
